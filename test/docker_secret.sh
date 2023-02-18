@@ -1,0 +1,1 @@
+kubectl create secret bocker-registry regcred --docker-username="" --docker-password="" --docker-email=""
