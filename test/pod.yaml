@@ -4,6 +4,9 @@ metadata:
   name: nginx
   labels:
     app: nginx
+  annotations:
+    created: "ilkhom82"
+    repo: "https://github.com"
 spec:
   nodeSelector:
     topology.kubernetes.io/zone: us-east-2b
