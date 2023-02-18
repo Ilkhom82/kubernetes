@@ -1,1 +1,1 @@
-aws eks update-kubeconfig --name test  --region us-east-2
+aws eks update-kubeconfig --name class1 --region us-east-2
