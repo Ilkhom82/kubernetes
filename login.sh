@@ -1,0 +1,1 @@
+aws eks update-kubeconfig --name test  --region us-east-2
