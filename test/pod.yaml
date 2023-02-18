@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx
   annotations:
-    created_by: "ilkhom82"
+    created_by: "Ilkhom"
     repo: "https://github.com"
 spec:
   nodeSelector:
