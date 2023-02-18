@@ -1,4 +1,4 @@
-read -p "Please anter your ocker sername: "  DOCKER_USERNAME
+read -p "Please anter your ocker username: "  DOCKER_USERNAME
 read -p "Please anter your ocker password: " DOCKER_PASSWORD
 read -p "Please anter your ocker email: "    DOCKER_EMAIL
 
