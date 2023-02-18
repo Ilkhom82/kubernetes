@@ -6,7 +6,7 @@ metadata:
     app: nginx
 spec:
   nodeSelector:
-    failure-domain.beta.kubernetes.io/zone us-east-2b
+    failure-domain.beta.kubernetes.io/zone: us-east-2b
   containers:
   - name: nginx
     image: nginx:1.14.2
