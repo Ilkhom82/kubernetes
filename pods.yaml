@@ -1,0 +1,67 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    app: nginx 
+  annotations:
+    created_by: "Farrukh"
+    repo: "https://github.com"
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    livenessProbe:
+      initialDelaySeconds: 120
+      periodSeconds: 10
+      timeoutSeconds: 5
+      failureThreshold: 6
+      successThreshold: 1
+      httpGet: null
+      tcpSocket:
+        port: 80
+    readinessProbe:
+      initialDelaySeconds: 30
+      periodSeconds: 10
+      timeoutSeconds: 5
+      failureThreshold: 6
+      successThreshold: 1
+      httpGet: null
+      tcpSocket:
+        port: 80
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+  - name: redis
+    image: redis
+    livenessProbe:
+      initialDelaySeconds: 120
+      periodSeconds: 10
+      timeoutSeconds: 5
+      failureThreshold: 6
+      successThreshold: 1
+      httpGet: null
+      tcpSocket:
+        port: 6379
+    readinessProbe:
+      initialDelaySeconds: 30
+      periodSeconds: 10
+      timeoutSeconds: 5
+      failureThreshold: 6
+      successThreshold: 1
+      httpGet: null
+      tcpSocket:
+        port: 6379
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+Footer
